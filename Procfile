@@ -1,1 +1,1 @@
-web: gunicorn clients_management.wsgi --log-file -
+web: gunicorn core.wsgi --clients_management=-
