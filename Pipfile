@@ -1,0 +1,25 @@
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+asgiref = "==3.4.1"
+dj-database-url = "==1.0.0"
+dj-static = "==0.0.6"
+django = "==3.2.15"
+django-heroku = "==0.3.1"
+gunicorn = "*"
+pillow = "==8.4.0"
+psycopg2 = "==2.9.3"
+python-decouple = "==3.6"
+pytz = "==2022.1"
+sqlparse = "==0.4.2"
+static3 = "==0.7.0"
+typing-extensions = "==4.1.1"
+whitenoise = "==5.3.0"
+
+[dev-packages]
+
+[requires]
+python_version = "3.6"
