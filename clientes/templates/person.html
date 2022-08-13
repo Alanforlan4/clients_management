@@ -1,29 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+{% extends 'base.html' %}
 
-    <a href=" {% url 'logout' %}">Sair</a>
-    <ul>
+{% block title %} Admnistração {% endblock %}
 
-    {% for person in persons %}
+{% block main %} 
+<a href=" {% url 'logout' %}">Sair</a>
+<ul>
 
-        <li>
-            <a href="{% url 'persons_update' person.id %}">{{ person.first_name }}</a>
-            <a href="{% url 'persons_delete' person.id %}">Deletar</a>
-        </li>
+{% for person in persons %}
 
-    {% endfor %}
+    <li>
+        <a href="{% url 'persons_update' person.id %}">{{ person.first_name }}</a>
+        <a href="{% url 'persons_delete' person.id %}" class="btn btn-danger">Deletar</a>
+    </li>
 
-    </ul>
-    
+{% endfor %}
+
+</ul>
+
 <br>
-    <a href="{% url 'person_new' %}"> Novo cliente</a>
-    
-</body>
-</html>
+<a href="{% url 'person_new' %}" class="btn btn-primary"> Novo cliente</a>
+{% endblock %}
